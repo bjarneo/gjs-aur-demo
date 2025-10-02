@@ -299,3 +299,7 @@ When publishing to AUR, choose your package name based on the source:
 - Building directly from git HEAD? → Use `your-app-git` (with -git suffix)
 
 This guide uses tagged releases, so we use `your-app` without the `-git` suffix.
+
+---
+
+[x.com/iamdothash](https://x.com/iamdothash)
