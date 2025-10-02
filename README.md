@@ -15,7 +15,7 @@ This is an educational GTK demo. The code is extensively commented to explain ev
 - The GObject type system
 - Building complete GTK applications
 
-## For the publish to AUR guide
+## Publishing to AUR
 See AUR_PUBLISH.md
 
 ## Requirements
