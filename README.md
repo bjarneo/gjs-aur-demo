@@ -53,49 +53,11 @@ While this demo uses JavaScript (GJS), GTK is available in many programming lang
 
 ### Python (PyGObject)
 
-```python
-import gi
-gi.require_version('Gtk', '4.0')
-from gi.repository import Gtk
-
-class MyWindow(Gtk.ApplicationWindow):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        button = Gtk.Button(label="Click me!")
-        self.set_child(button)
-
-app = Gtk.Application()
-app.connect('activate', lambda app: MyWindow(application=app).present())
-app.run(None)
-```
-
 **Resources:**
 - [PyGObject Documentation](https://pygobject.readthedocs.io/)
 - [Python GTK 4 Tutorial](https://python-gtk-3-tutorial.readthedocs.io/)
 
 ### Rust (gtk-rs)
-
-```rust
-use gtk::prelude::*;
-use gtk::{Application, ApplicationWindow, Button};
-
-fn main() {
-    let app = Application::builder()
-        .application_id("com.example.demo")
-        .build();
-
-    app.connect_activate(|app| {
-        let button = Button::with_label("Click me!");
-        let window = ApplicationWindow::builder()
-            .application(app)
-            .child(&button)
-            .build();
-        window.present();
-    });
-
-    app.run();
-}
-```
 
 **Resources:**
 - [gtk-rs Book](https://gtk-rs.org/gtk4-rs/stable/latest/book/)
@@ -103,43 +65,13 @@ fn main() {
 
 ### C++ (gtkmm)
 
-```cpp
-#include <gtkmm.h>
-
-int main(int argc, char* argv[]) {
-    auto app = Gtk::Application::create("com.example.demo");
-
-    return app->make_window_and_run<Gtk::Window>(argc, argv);
-}
-```
-
 **Resources:**
 - [gtkmm Documentation](https://www.gtkmm.org/)
 - [gtkmm Tutorial](https://gnome.pages.gitlab.gnome.org/gtkmm-documentation/)
 
 ### C (Native)
 
-GTK is written in C. Direct access to all features, but more verbose.
-
-```c
-#include <gtk/gtk.h>
-
-static void activate(GtkApplication *app, gpointer user_data) {
-    GtkWidget *window = gtk_application_window_new(app);
-    GtkWidget *button = gtk_button_new_with_label("Click me!");
-    gtk_window_set_child(GTK_WINDOW(window), button);
-    gtk_window_present(GTK_WINDOW(window));
-}
-
-int main(int argc, char **argv) {
-    GtkApplication *app = gtk_application_new("com.example.demo",
-                                               G_APPLICATION_FLAGS_NONE);
-    g_signal_connect(app, "activate", G_CALLBACK(activate), NULL);
-    int status = g_application_run(G_APPLICATION(app), argc, argv);
-    g_object_unref(app);
-    return status;
-}
-```
+GTK is written in C.
 
 **Resources:**
 - [GTK Documentation](https://docs.gtk.org/gtk4/)
@@ -155,7 +87,8 @@ GTK has bindings for many more languages via GObject Introspection:
 - **Haskell** - Via gi-gtk
 - **Ruby** - Via ruby-gnome
 
-**Why GObject Introspection?** Most GTK bindings (including JavaScript/GJS) use GObject Introspection, which automatically generates language bindings from GTK's API. This means all languages get the same features and stay in sync with GTK updates.
+Why GObject Introspection? Most GTK bindings (including JavaScript/GJS) use GObject Introspection, which automatically generates language bindings from GTK's API. This means all languages get the same features and stay in sync with GTK updates.
+
 ---
 
 ## Publishing to AUR (Arch User Repository)
