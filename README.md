@@ -6,6 +6,9 @@ A simple, heavily-commented GTK4 demo application written in JavaScript (GJS). T
 
 This is an educational GTK demo. The code is extensively commented to explain every concept, making it perfect for learning how GTK works.
 
+## For the publish to AUR guide
+See AUR_PUBLISH.md
+
 **What it does:** Type text into an input field, click a button, and see the text displayed on screen.
 
 **What you'll learn:**
