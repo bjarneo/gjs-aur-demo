@@ -2,6 +2,9 @@
 
 A simple, heavily-commented GTK4 demo application written in JavaScript (GJS). This demo is designed to teach you the basics of building GUI applications with GTK.
 
+## GJS docs 
+[Documentation](https://gjs.guide/)
+
 ## What This Is About
 
 This is an educational GTK demo. The code is extensively commented to explain every concept, making it perfect for learning how GTK works.
