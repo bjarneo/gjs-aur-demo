@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Demo
+Comment=Just a demo
+Exec=demo
+Icon=demo
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=just;a;demo;
