@@ -25,7 +25,7 @@
 
 /**
  * ============================================================================
- *                            THE SUPER TINY GTK DEMO
+ *                            THE GTK DEMO
  * ============================================================================
  *
  * Welcome! This is a heavily commented demo of a GTK4 application written in
