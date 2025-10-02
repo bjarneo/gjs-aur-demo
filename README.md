@@ -77,6 +77,10 @@ GTK is written in C.
 - [GTK Documentation](https://docs.gtk.org/gtk4/)
 - [GTK Tutorial](https://www.gtk.org/docs/getting-started/)
 
+
+## Apps
+- [Awesome GTK](https://github.com/valpackett/awesome-gtk)
+
 ### Other Languages
 
 GTK has bindings for many more languages via GObject Introspection:
